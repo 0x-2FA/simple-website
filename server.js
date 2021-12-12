@@ -11,6 +11,8 @@ const views = '/views'
 // get assets from the assets directory
 app.use(express.static('assets'));
 
+app.use(express.static('views'));
+
 app.listen(port, () => {
     console.log(`Running on localhost:${port}`);
 });

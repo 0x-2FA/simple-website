@@ -1,0 +1,12 @@
+/* Implement the main navbar styling */
+.navbar{
+    font-size: 2rem;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar a{
+    text-decoration: none;
+}
