@@ -15,7 +15,7 @@ body{
 
 .flex-center{
     justify-content: center;
-    align-self: center;
+    /* align-self: center; */
 }
 
 .flex-end{
@@ -23,6 +23,18 @@ body{
     align-self: center;
 }
 
+.flex-align-center{
+    align-items: center;
+}
+
 .flex-column{
     flex-direction: column;
+}
+
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+.flex-grow-2{
+    flex-grow: 2;
 }
