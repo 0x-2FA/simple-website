@@ -1,0 +1,18 @@
+{
+  "name": "simple-website",
+  "version": "0.0.1",
+  "description": "A simple website made with express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "expressjs"
+  ],
+  "author": "0x-2FA",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
