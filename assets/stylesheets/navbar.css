@@ -13,6 +13,10 @@
     text-decoration: none;
 }
 
+.navbar a:hover{
+    color: white;
+}
+
 .navbar li + li{
     margin-left: 1em;
 }
