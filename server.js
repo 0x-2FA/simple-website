@@ -19,7 +19,7 @@ app.listen(port, () => {
 
 // render the index.html file
 app.get('/', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname + views, 'index.html'));
 });
 
 // render the about.html file

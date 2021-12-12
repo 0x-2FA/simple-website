@@ -1,6 +1,8 @@
 /* Implement the main navbar styling */
 .navbar{
-    font-size: 2rem;
+    background-color: #6378AD;
+    font-size: 1.4rem;
+    padding: 0.2em;
 }
 
 .navbar ul{
@@ -9,4 +11,15 @@
 
 .navbar a{
     text-decoration: none;
+}
+
+.navbar li + li{
+    margin-left: 1em;
+}
+
+.nav-item{
+    padding: 0.5em 1.2em;
+    background-color: #FFDED6;
+    border-radius: 0.3em;
+    color: #6378AD;
 }
