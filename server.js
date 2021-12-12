@@ -5,6 +5,9 @@ const app = express();
 
 const port = 3000;
 
+// get assets from the assets directory
+app.use(express.static('assets'));
+
 app.listen(port, () => {
     console.log(`Running on localhost:${port}`);
 });
