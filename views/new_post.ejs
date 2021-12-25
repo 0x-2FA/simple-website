@@ -13,6 +13,16 @@
     <header>
         <%- include('layouts/navbar') -%>
     </header>
-    <h1>Create New Post</h1>
+
+    <form style="max-width: 15%;" action="/post/articles" method="post">
+        <h1>Create New Post</h1>
+        <div class="flex flex-column">
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Enter a title for the article">
+
+            <label for="body">Article Body</label>
+            <textarea name="body" id="" cols="30" rows="10"></textarea>
+        </div>
+    </form>
 </body>
 </html>

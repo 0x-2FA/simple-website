@@ -34,3 +34,8 @@ app.get('/contact', (req, res) => {
 app.get('/new_post', (req, res) => {
     res.render('new_post');
 });
+
+app.post('/post/articles', (req, res) => {
+    console.log(req.body);
+    res.redirect('/');
+});
