@@ -15,17 +15,22 @@ app.listen(port, () => {
     console.log(`Running on localhost:${port}`);
 });
 
-// render the index.html file
+// render the index.ejs file
 app.get('/', (req, res) =>{
     res.render('index');
 });
 
-// render the about.html file
+// render the about.ejs file
 app.get('/about', (req, res) => {
     res.render('about');
 });
 
-// render the contact.html file
+// render the contact.ejs file
 app.get('/contact', (req, res) => {
     res.render('contact');
+});
+
+// render the new_post.ejs file
+app.get('/new_post', (req, res) => {
+    res.render('new_post');
 });
