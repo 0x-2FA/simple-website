@@ -1,12 +1,16 @@
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
+const body_parser = require('body-parser');
 
 const app = express();
 
 const port = 3000;
 
 app.set('view engine', 'ejs');
+
+app.use(body_parser.json());
+app.use(body_parser.urlencoded({extended:true}));
 
 // get assets from the assets directory
 app.use(express.static('assets'));
