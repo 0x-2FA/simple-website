@@ -3,6 +3,9 @@ const ejs = require('ejs');
 const path = require('path');
 const body_parser = require('body-parser');
 
+//const pool =  require("./model/db");
+const pg = require('./model/db'); 
+
 const app = express();
 
 const port = 3000;
@@ -41,5 +44,6 @@ app.get('/new_post', (req, res) => {
 
 app.post('/post/articles', (req, res) => {
     console.log(req.body);
+    pg.create_post(pg.pool, pg.table_posts, req.body.title, req.body.body);
     res.redirect('/');
 });
