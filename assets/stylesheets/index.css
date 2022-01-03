@@ -11,3 +11,19 @@
 .right-container div + div{
     margin-top: 3em;
 }
+
+.articles{
+    margin-top: 1em;
+}
+
+.articles div + div{
+    margin-top: 1em;
+}
+
+.post{
+    background-color: white;
+    padding: 1.2em;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+}

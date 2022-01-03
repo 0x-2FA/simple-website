@@ -17,17 +17,19 @@
     <main class="flex">
         
         <!-- Main container -->
-        <div class="flex-grow-2">
-            <% for(let row of posts){ %>
-                <div class="post">
-                    <h2 class="title">
-                        <%= row.title %>
-                    </h2>
-                    <p class="post-body">
-                        <%= row.body %>
-                    </p>
-                </div>
-              <% } %>
+        <div class="flex-grow-2 articles">
+            <% if(posts.length != 0){ %>
+                <% for(let row of posts){ %>
+                    <div class="post">
+                        <h2 class="title">
+                            <%= row.title %>
+                        </h2>
+                        <p class="post-body">
+                            <%= row.body %>
+                        </p>
+                    </div>
+                <% } %>
+            <% } %>
         </div>
         
 
