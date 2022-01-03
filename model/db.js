@@ -53,7 +53,7 @@ module.exports = {
     
     const result = await client.query(text);
     for (const row of result.rows) {
-      posts.push(row)
+      posts.unshift(row)
     }
     return posts;
   },
