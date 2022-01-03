@@ -4,6 +4,8 @@
 
 const {Pool} = require('pg');
 const fs = require('file-system');
+const res = require('express/lib/response');
+const { rows } = require('pg/lib/defaults');
 
 const table_posts = "posts"; // database table for storing articles
 
@@ -39,23 +41,21 @@ module.exports = {
     });
   },
 
-  select_all: (pool, table) => {
-    pool.connect;
-    const text = `select * from ${table};`;
+  select_all: async (pool, table) => {
     
-    pool.query(text, (err, res) =>{
-      if (err) 
-      {
-        console.log(err.stack);  
-      }
-      else
-      {
-        for (const row of res.rows) {
-          console.log(row);
-        }
+    const text = {
+      text: `select * from ${table};`,
+    }
+    
+    let posts = [];
   
-      }
-    });
+    const client = await pool.connect();
+    
+    const result = await client.query(text);
+    for (const row of result.rows) {
+      posts.push(row)
+    }
+    return posts;
   },
 
 };

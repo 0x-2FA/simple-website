@@ -18,7 +18,16 @@
         
         <!-- Main container -->
         <div class="flex-grow-2">
-            Main
+            <% for(let row of posts){ %>
+                <div class="post">
+                    <h2 class="title">
+                        <%= row.title %>
+                    </h2>
+                    <p class="post-body">
+                        <%= row.body %>
+                    </p>
+                </div>
+              <% } %>
         </div>
         
 
@@ -34,7 +43,10 @@
                 Ads
             </div>
         </div>
+        
 
+
+        
     </main>
 
     <script src="js/index.js"></script>

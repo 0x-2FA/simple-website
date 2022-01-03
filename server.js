@@ -24,7 +24,9 @@ app.listen(port, () => {
 
 // render the index.ejs file
 app.get('/', (req, res) =>{
-    res.render('index');
+    pg.select_all(pg.pool, pg.table_posts).then( posts => {
+        res.render('index', {posts});
+    });
 });
 
 // render the about.ejs file
