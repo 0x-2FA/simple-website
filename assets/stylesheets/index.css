@@ -8,6 +8,10 @@
     box-sizing: inherit;
 }
 
+.container > div + div{
+    margin-left: 1em;
+}
+
 .right-container div + div{
     margin-top: 3em;
 }

@@ -45,7 +45,6 @@ app.get('/new_post', (req, res) => {
 });
 
 app.post('/post/articles', (req, res) => {
-    console.log(req.body);
     pg.create_post(pg.pool, pg.table_posts, req.body.title, req.body.body);
     res.redirect('/');
 });
